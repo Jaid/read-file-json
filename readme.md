@@ -16,13 +16,8 @@ yarn add read-file-json@^0.1.0
 
 
 ## Documentation
-
-* [read-file-json](#module_read-file-json)
-    * [module.exports(file)](#exp_module_read-file-json--module.exports) ⇒ <code>Promise.&lt;string&gt;</code> ⏏
-        * [.readFileJsonSync(file)](#module_read-file-json--module.exports.readFileJsonSync) ⇒ <code>string</code>
-
 **Kind**: Exported function  
-**Returns**: <code>Promise.&lt;string&gt;</code> - File contents in UTF-8 or null if file could not be read  
+**Returns**: <code>Promise.&lt;string&gt;</code> - Object returned from json5.parse(fileString)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -31,21 +26,8 @@ yarn add read-file-json@^0.1.0
 **Example**  
 ```javascript
 import readFileJson from "read-file-json"
-const result = await readFileJson("readme.md")
-result === "## Hewwo OwO"
-```
-**Kind**: static method of [<code>module.exports</code>](#exp_module_read-file-json--module.exports)  
-**Returns**: <code>string</code> - File contents in UTF-8 or null if file could not be read  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
-
-**Example**  
-```javascript
-import {readFileJsonSync} from "read-file-json"
-const result = readFileJsonSync("readme.md")
-result === "## Hewwo OwO"
+const result = await readFileJson("package.json")
+result.version === "1.2.3"
 ```
 
 
