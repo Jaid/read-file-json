@@ -6,7 +6,7 @@ import readFileString from "read-file-string"
 /**
  * @function
  * @param {string} file Path to a file
- * @returns {Promise<string>} Object returned from json5.parse(fileString)
+ * @returns {Promise<Object|null>} Object returned from json5.parse(fileString)
  * @example
  * import readFileJson from "read-file-json"
  * const result = await readFileJson("package.json")
