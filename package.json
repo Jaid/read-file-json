@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@absolunet/fsp": "^1.6.2",
-    "@absolunet/fss": "^1.6.2",
-    "@babel/runtime": "^7.7.7"
+    "@babel/runtime": "^7.7.7",
+    "json5": "^2.1.1",
+    "read-file-string": "^1.0.0"
   },
   "devDependencies": {
     "acorn": "^7.1.0",

@@ -5,42 +5,16 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
 /**
   * @type { import("../src") }
   */
-const {default: readFileJson, readFileJsonSync} = indexModule
+const {default: readFileJson} = indexModule
 
 it("should return string (async)", async () => {
-  const file = path.join(__dirname, "..", "readme.md")
+  const file = path.join(__dirname, "..", "package.json")
   const result = await readFileJson(file)
-  expect(typeof result.length).toBe("number")
-  expect(result.length).toBeGreaterThan(10)
+  expect(result.name).toBe("read-file-json")
 })
 
 it("should return null for non-existing files (async)", async () => {
-  const file = path.join(__dirname, "..", "readmeNOT.md")
+  const file = path.join(__dirname, "..", "package.freddy")
   const result = await readFileJson(file)
-  expect(result).toBe(null)
-})
-
-it("should return null for folders (async)", async () => {
-  const file = path.join(__dirname, "..", "src")
-  const result = await readFileJson(file)
-  expect(result).toBe(null)
-})
-
-it("should return string (sync)", () => {
-  const file = path.join(__dirname, "..", "readme.md")
-  const result = readFileJsonSync(file)
-  expect(typeof result.length).toBe("number")
-  expect(result.length).toBeGreaterThan(10)
-})
-
-it("should return null for non-existing files (sync)", () => {
-  const file = path.join(__dirname, "..", "readmeNOT.md")
-  const result = readFileJsonSync(file)
-  expect(result).toBe(null)
-})
-
-it("should return null for folders (sync)", async () => {
-  const file = path.join(__dirname, "..", "src")
-  const result = await readFileJsonSync(file)
   expect(result).toBe(null)
 })
