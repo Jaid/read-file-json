@@ -17,7 +17,7 @@ yarn add read-file-json@^1.0.0
 
 ## Documentation
 **Kind**: Exported function  
-**Returns**: <code>Promise.&lt;string&gt;</code> - Object returned from json5.parse(fileString)  
+**Returns**: <code>Promise.&lt;(Object\|null)&gt;</code> - Object returned from json5.parse(fileString)  
 
 | Param | Type | Description |
 | --- | --- | --- |
