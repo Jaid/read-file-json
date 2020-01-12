@@ -1,33 +1,60 @@
 # read-file-json
 
 
-Reads JSON and JSON5 from a file. Returns null if file does not exist (or is a directory) instead of throwing an Error.
+<a href="https://raw.githubusercontent.com/Jaid/read-file-json/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/read-file-json?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/read-file-json/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fread-file-json%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/read-file-json/commits"><img src="https://img.shields.io/github/commits-since/Jaid/read-file-json/v1.0.1?style=flat-square&logo=github" alt="Commits since v1.0.1"/></a> <a href="https://github.com/Jaid/read-file-json/commits"><img src="https://img.shields.io/github/last-commit/Jaid/read-file-json?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/read-file-json/issues"><img src="https://img.shields.io/github/issues/Jaid/read-file-json?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/read-file-json"><img src="https://img.shields.io/npm/v/read-file-json?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/read-file-json/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/read-file-json?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/read-file-json"><img src="https://img.shields.io/npm/dm/read-file-json?style=flat-square&logo=npm" alt="Downloads"/></a>
+
+**Reads JSON and JSON5 from a file. Returns null if file does not exist (or is a directory) instead of throwing an Error.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Installation
-<a href='https://npmjs.com/package/read-file-json'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/read-file-json"><img src="https://img.shields.io/badge/npm-read--file--json-C23039?style=flat-square&logo=npm" alt="read-file-json on npm"/></a>
 ```bash
 npm install --save read-file-json@^1.0.1
 ```
-<a href='https://yarnpkg.com/package/read-file-json'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/read-file-json"><img src="https://img.shields.io/badge/Yarn-read--file--json-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="read-file-json on Yarn"/></a>
 ```bash
 yarn add read-file-json@^1.0.1
 ```
 
 
 
-## Documentation
-**Kind**: Exported function  
-**Returns**: <code>Promise.&lt;(Object\|null)&gt;</code> - Object returned from json5.parse(fileString)  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| file | <code>string</code> | Path to a file |
 
-**Example**  
-```javascript
-import readFileJson from "read-file-json"
-const result = await readFileJson("package.json")
-result.version === "1.2.3"
+
+
+
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/read-file-json.git
+cd read-file-json
+npm install
+```
+Testing:
+```bash
+npm run test:dev
+```
+Testing in production environment:
+```bash
+npm run test
 ```
 
 
@@ -35,7 +62,7 @@ result.version === "1.2.3"
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
