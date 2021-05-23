@@ -15,7 +15,7 @@ import readFileString from "read-file-string"
 export default async file => {
   const text = await readFileString(file)
   if (text === null) {
-    return null
+    return text
   }
   return json5.parse(text)
 }
